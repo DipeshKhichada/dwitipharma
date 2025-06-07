@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | DWITI Pharmaceuticals</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-xl font-bold">DWITI Pharmaceuticals</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="product.html" class="hover:underline">Products</a>
+        <a href="contact.html" class="underline font-semibold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="bg-cover bg-center h-64 flex items-center justify-center" style="background-image: url('https://img.freepik.com/free-photo/hospital-contact-us-banner_53876-128214.jpg');">
+    <div class="bg-blue-900 bg-opacity-60 text-white p-6 rounded text-center">
+      <h2 class="text-3xl font-bold">Contact Us</h2>
+      <p class="text-lg">We’re here to support your pharmaceutical needs</p>
+    </div>
+  </section>
+
+  <!-- Contact Info + Form -->
+  <main class="container mx-auto py-12 px-6">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h3 class="text-2xl font-bold text-blue-900 mb-4">Get in Touch</h3>
+        <p><strong>Office:</strong> UG-317, Dreams The Mall, LBS Marg, Bhandup (W), Mumbai 400078</p>
+        <p><strong>Phone:</strong> 9702444443 / 9029811111</p>
+        <p><strong>Email:</strong> rajbhanushali@rocketmail.com</p>
+        <p><strong>GSTIN:</strong> 24AOQPB4958L1ZH</p>
+        <p class="mt-4">For any queries, bulk order requests, or feedback, feel free to reach out to us. We’ll respond promptly to serve your healthcare requirements.</p>
+      </div>
+
+      <!-- Contact Form with FormSubmit -->
+      <div class="bg-white border p-6 shadow rounded-lg">
+        <h3 class="text-xl font-semibold mb-4">Contact Form</h3>
+        <form action="https://formsubmit.co/rajbhanushali@rocketmail.com" method="POST" class="space-y-4">
+          <!-- Hidden fields for customization -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Inquiry from DWITI Pharma Website">
+          <input type="hidden" name="_template" value="table">
+
+          <div>
+            <label class="block font-semibold mb-1">Full Name</label>
+            <input type="text" name="name" required class="w-full border border-gray-300 px-4 py-2 rounded" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Email Address</label>
+            <input type="email" name="email" required class="w-full border border-gray-300 px-4 py-2 rounded" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Phone Number</label>
+            <input type="tel" name="phone" required class="w-full border border-gray-300 px-4 py-2 rounded" />
+          </div>
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center p-4 mt-10">
+    <p>&copy; 2025 DWITI Pharmaceuticals. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
