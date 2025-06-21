@@ -6,123 +6,163 @@
   <title>Products | DWITI Pharmaceuticals</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #000000;
-      color: #FFD700;
+      font-family: 'Inter', sans-serif;
+      background-color: #EAEAEA;
+      color: #231F20;
     }
+
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
+      color: #AD974F;
     }
+
     .gold-text {
-      color: #FFD700;
+      color: #AD974F;
     }
+
     .gold-bg {
-      background-color: #FFD700;
+      background-color: #AD974F;
     }
+
     .hover-gold:hover {
-      background-color: #D4AF37;
-      color: black;
+      background-color: #8f7c38;
+      color: white;
+    }
+
+    .text-dark {
+      color: #231F20;
+    }
+
+    .bg-light {
+      background-color: #EAEAEA;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #ffffff;
+      color: #231F20;
+      border-top: 1px solid #AD974F;
+    }
+
+    .product-category h4 {
+      color: #AD974F;
+    }
+
+    .product-description {
+      color: #231F20;
+    }
+
+    .section-title {
+      color: #AD974F;
+      border-color: #AD974F;
+    }
+
+    .product-section {
+      background-color: #EAEAEA;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
-  <header class="bg-black text-yellow-300 shadow sticky top-0 z-50 border-b border-yellow-600">
-    <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-2xl font-bold gold-text">DWITI Pharmaceuticals</h1>
-      <nav class="space-x-6 text-yellow-300 text-lg">
-        <a href="index.html" class="hover:text-yellow-100">Home</a>
-        <a href="product.html" class="text-yellow-100 underline">Products</a>
-        <a href="contact.html" class="hover:text-yellow-100">Contact</a>
+  <header class="bg-white shadow sticky top-0 z-10 border-b border-gray-200">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-6 py-4">
+      <div class="flex items-center space-x-3">
+        <img src="dwiti.png" alt="DWITI Logo" class="h-14 w-14 rounded-full border border-yellow-500 shadow-md" />
+        <h1 class="text-2xl font-extrabold tracking-wide gold-text">DWITI Pharmaceuticals</h1>
+      </div>
+      <nav class="space-x-0 md:space-x-6 text-lg flex flex-col md:flex-row items-start md:items-center mt-4 md:mt-0">
+        <a href="index.html" class="hover:text-yellow-700 gold-text">Home</a>
+        <a href="product.html" class="hover:text-yellow-700 gold-text underline">Products</a>
+        <a href="contact.html" class="hover:text-yellow-700 gold-text">Contact</a>
       </nav>
     </div>
   </header>
 
-<!-- Banner -->
-<section class="h-64 flex flex-col items-center justify-center bg-gradient-to-r from-black via-gray-900 to-black text-yellow-100 text-center px-6">
-  <h2 class="text-4xl font-extrabold tracking-wide text-yellow-300 font-serif mb-2" style="color: #FFD700;">
-    Elevating Healthcare with Trust & Innovation
-  </h2>
-  <p class="text-lg text-yellow-200 font-light max-w-2xl mb-4" style="color: #FFD700;">
-    Delivering top-tier pharmaceutical and diagnostic solutions for a healthier tomorrow. Quality, precision, and care — the DWITI promise.
-  </p>
-  <span class="text-2xl font-bold font-serif border-t border-yellow-600 pt-2" style="color: #FFD700;">
-    Our Products
-  </span>
-</section>
-
-
-
+  <!-- Banner -->
+  <section class="h-auto py-10 sm:h-64 flex flex-col items-center justify-center text-center px-4 bg-light">
+    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-wide gold-text mb-3">
+      Elevating Healthcare with Trust & Innovation
+    </h2>
+    <p class="text-sm sm:text-lg text-gray-700 font-light max-w-xl mb-4">
+      Delivering top-tier pharmaceutical and diagnostic solutions for a healthier tomorrow. Quality, precision, and care — the DWITI promise.
+    </p>
+    <span class="text-xl sm:text-2xl font-bold border-t pt-2 gold-text">
+      Our Products
+    </span>
+  </section>
 
   <!-- Product Sections -->
-  <section class="py-16 bg-black">
-    <div class="container mx-auto px-6 space-y-16">
-
-      <!-- Section Template -->
-      <!-- Repeat per Category -->
+  <section class="py-12 sm:py-16 product-section">
+    <div class="container mx-auto px-4 sm:px-6 space-y-12 sm:space-y-16">
 
       <!-- Reagents -->
       <div>
-        <h3 class="text-3xl font-bold gold-text border-b border-yellow-500 pb-2 mb-6">Reagents & Diagnostic Kits</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div><h4 class="font-semibold text-yellow-300">HBSAG Rapid Kit</h4><p class="text-sm text-yellow-200">Detects hepatitis B surface antigen for fast clinical screening.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">HCV Rapid Kit</h4><p class="text-sm text-yellow-200">Quick and reliable test for hepatitis C virus antibodies.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">HIV Determine</h4><p class="text-sm text-yellow-200">Accurate early detection kit for HIV diagnosis.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">H. Pylori (Stool)</h4><p class="text-sm text-yellow-200">Non-invasive antigen detection in stool samples.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">H. Pylori (Serum)</h4><p class="text-sm text-yellow-200">Serology test for Helicobacter pylori antibodies.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Malaria Card Cassette</h4><p class="text-sm text-yellow-200">Rapid test to detect malaria-causing parasites.</p></div>
+        <h3 class="text-2xl sm:text-3xl font-bold section-title border-b pb-2 mb-6">Reagents & Diagnostic Kits</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div><h4 class="font-semibold product-category">HBSAG Rapid Kit</h4><p class="text-sm product-description">Detects hepatitis B surface antigen for fast clinical screening.</p></div>
+          <div><h4 class="font-semibold product-category">HCV Rapid Kit</h4><p class="text-sm product-description">Quick and reliable test for hepatitis C virus antibodies.</p></div>
+          <div><h4 class="font-semibold product-category">HIV Determine</h4><p class="text-sm product-description">Accurate early detection kit for HIV diagnosis.</p></div>
+          <div><h4 class="font-semibold product-category">H. Pylori (Stool)</h4><p class="text-sm product-description">Non-invasive antigen detection in stool samples.</p></div>
+          <div><h4 class="font-semibold product-category">H. Pylori (Serum)</h4><p class="text-sm product-description">Serology test for Helicobacter pylori antibodies.</p></div>
+          <div><h4 class="font-semibold product-category">Malaria Card Cassette</h4><p class="text-sm product-description">Rapid test to detect malaria-causing parasites.</p></div>
         </div>
       </div>
 
       <!-- Consumables -->
       <div>
-        <h3 class="text-3xl font-bold gold-text border-b border-yellow-500 pb-2 mb-6">Hospital & Laboratory Consumables</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div><h4 class="font-semibold text-yellow-300">Scalp Vein Set (20G–24G)</h4><p class="text-sm text-yellow-200">Various gauge vein sets for blood collection and IV access.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Needles (20G–30G)</h4><p class="text-sm text-yellow-200">Range of needles for injections and sample collection.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Vacutainer Needle (22G)</h4><p class="text-sm text-yellow-200">Specialized needle for blood collection tubes.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Syringes (1ml–20ml)</h4><p class="text-sm text-yellow-200">Different volumes for injections and fluid administration.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Hypoflow IV Set</h4><p class="text-sm text-yellow-200">Infusion set for controlled intravenous fluid delivery.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Sterile Water Injection 10ml</h4><p class="text-sm text-yellow-200">Sterile water for injection use in medical procedures.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Alcohol Swab</h4><p class="text-sm text-yellow-200">Prepares skin surface for injection or venipuncture.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Surgical Gloves (Sizes 6.0–8.0)</h4><p class="text-sm text-yellow-200">Sterile gloves for medical and surgical procedures.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Disposable Nurse Caps</h4><p class="text-sm text-yellow-200">Single-use caps to maintain hygiene in clinical settings.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Spatula + Cytobrush</h4><p class="text-sm text-yellow-200">Tools used for collecting cellular samples.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Sterillium</h4><p class="text-sm text-yellow-200">Hand disinfectant for infection control.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Cotton Wools</h4><p class="text-sm text-yellow-200">Soft cotton used for wound care and cleaning.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Surgical Blade (Size)</h4><p class="text-sm text-yellow-200">Precision blades for surgical and medical use.</p></div>
+        <h3 class="text-2xl sm:text-3xl font-bold section-title border-b pb-2 mb-6">Hospital & Laboratory Consumables</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div><h4 class="font-semibold product-category">Scalp Vein Set (20G–24G)</h4><p class="text-sm product-description">Various gauge vein sets for blood collection and IV access.</p></div>
+          <div><h4 class="font-semibold product-category">Needles (20G–30G)</h4><p class="text-sm product-description">Range of needles for injections and sample collection.</p></div>
+          <div><h4 class="font-semibold product-category">Vacutainer Needle (22G)</h4><p class="text-sm product-description">Specialized needle for blood collection tubes.</p></div>
+          <div><h4 class="font-semibold product-category">Syringes (1ml–20ml)</h4><p class="text-sm product-description">Different volumes for injections and fluid administration.</p></div>
+          <div><h4 class="font-semibold product-category">Hypoflow IV Set</h4><p class="text-sm product-description">Infusion set for controlled intravenous fluid delivery.</p></div>
+          <div><h4 class="font-semibold product-category">Sterile Water Injection 10ml</h4><p class="text-sm product-description">Sterile water for injection use in medical procedures.</p></div>
+          <div><h4 class="font-semibold product-category">Alcohol Swab</h4><p class="text-sm product-description">Prepares skin surface for injection or venipuncture.</p></div>
+          <div><h4 class="font-semibold product-category">Surgical Gloves (Sizes 6.0–8.0)</h4><p class="text-sm product-description">Sterile gloves for medical and surgical procedures.</p></div>
+          <div><h4 class="font-semibold product-category">Disposable Nurse Caps</h4><p class="text-sm product-description">Single-use caps to maintain hygiene in clinical settings.</p></div>
+          <div><h4 class="font-semibold product-category">Spatula + Cytobrush</h4><p class="text-sm product-description">Tools used for collecting cellular samples.</p></div>
+          <div><h4 class="font-semibold product-category">Sterillium</h4><p class="text-sm product-description">Hand disinfectant for infection control.</p></div>
+          <div><h4 class="font-semibold product-category">Cotton Wools</h4><p class="text-sm product-description">Soft cotton used for wound care and cleaning.</p></div>
+          <div><h4 class="font-semibold product-category">Surgical Blade (Size)</h4><p class="text-sm product-description">Precision blades for surgical and medical use.</p></div>
         </div>
       </div>
 
       <!-- Radiology -->
       <div>
-        <h3 class="text-3xl font-bold gold-text border-b border-yellow-500 pb-2 mb-6">Radiology & Pathology Supplies</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div><h4 class="font-semibold text-yellow-300">Micro Bar Powder</h4><p class="text-sm text-yellow-200">Powder used in microbiology and laboratory testing.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Micro Bar Liquid (Small)</h4><p class="text-sm text-yellow-200">Liquid reagent for microbiology applications.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Non-Ionic Contrast (90ml)</h4><p class="text-sm text-yellow-200">Contrast agent for imaging with low ionic load.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Ionic Contrast (50ml)</h4><p class="text-sm text-yellow-200">Contrast media for radiologic procedures.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">MRI Contrast (10ml)</h4><p class="text-sm text-yellow-200">Enhances magnetic resonance imaging scans.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">ECG Gel</h4><p class="text-sm text-yellow-200">Conductive gel used in electrocardiography.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">ECG Electrode</h4><p class="text-sm text-yellow-200">Electrodes for heart activity monitoring.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Slides, Cover Slips</h4><p class="text-sm text-yellow-200">Glassware for microscopic specimen examination.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Urine & Stool Containers</h4><p class="text-sm text-yellow-200">Sample containers for laboratory analysis.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Normal Saline</h4><p class="text-sm text-yellow-200">Sterile saline solution for medical use.</p></div>
+        <h3 class="text-2xl sm:text-3xl font-bold section-title border-b pb-2 mb-6">Radiology & Pathology Supplies</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div><h4 class="font-semibold product-category">Micro Bar Powder</h4><p class="text-sm product-description">Powder used in microbiology and laboratory testing.</p></div>
+          <div><h4 class="font-semibold product-category">Micro Bar Liquid (Small)</h4><p class="text-sm product-description">Liquid reagent for microbiology applications.</p></div>
+          <div><h4 class="font-semibold product-category">Non-Ionic Contrast (90ml)</h4><p class="text-sm product-description">Contrast agent for imaging with low ionic load.</p></div>
+          <div><h4 class="font-semibold product-category">Ionic Contrast (50ml)</h4><p class="text-sm product-description">Contrast media for radiologic procedures.</p></div>
+          <div><h4 class="font-semibold product-category">MRI Contrast (10ml)</h4><p class="text-sm product-description">Enhances magnetic resonance imaging scans.</p></div>
+          <div><h4 class="font-semibold product-category">ECG Gel</h4><p class="text-sm product-description">Conductive gel used in electrocardiography.</p></div>
+          <div><h4 class="font-semibold product-category">ECG Electrode</h4><p class="text-sm product-description">Electrodes for heart activity monitoring.</p></div>
+          <div><h4 class="font-semibold product-category">Slides, Cover Slips</h4><p class="text-sm product-description">Glassware for microscopic specimen examination.</p></div>
+          <div><h4 class="font-semibold product-category">Urine & Stool Containers</h4><p class="text-sm product-description">Sample containers for laboratory analysis.</p></div>
+          <div><h4 class="font-semibold product-category">Normal Saline</h4><p class="text-sm product-description">Sterile saline solution for medical use.</p></div>
         </div>
       </div>
 
-      <!-- Misc -->
+      <!-- Miscellaneous -->
       <div>
-        <h3 class="text-3xl font-bold gold-text border-b border-yellow-500 pb-2 mb-6">Miscellaneous Supplies</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div><h4 class="font-semibold text-yellow-300">Outsourcing Vials</h4><p class="text-sm text-yellow-200">Vials for sample storage and transport.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Yellow Tips</h4><p class="text-sm text-yellow-200">Pipette tips used in laboratory procedures.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Blue Tips</h4><p class="text-sm text-yellow-200">Standard pipette tips for liquid handling.</p></div>
-          <div><h4 class="font-semibold text-yellow-300">Glucose-D</h4><p class="text-sm text-yellow-200">Reagent for glucose detection in samples.</p></div>
+        <h3 class="text-2xl sm:text-3xl font-bold section-title border-b pb-2 mb-6">Miscellaneous Supplies</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div><h4 class="font-semibold product-category">Outsourcing Vials</h4><p class="text-sm product-description">Vials for sample storage and transport.</p></div>
+          <div><h4 class="font-semibold product-category">Yellow Tips</h4><p class="text-sm product-description">Pipette tips used in laboratory procedures.</p></div>
+          <div><h4 class="font-semibold product-category">Blue Tips</h4><p class="text-sm product-description">Standard pipette tips for liquid handling.</p></div>
+          <div><h4 class="font-semibold product-category">Glucose-D</h4><p class="text-sm product-description">Reagent for glucose detection in samples.</p></div>
         </div>
       </div>
 
@@ -130,8 +170,11 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-yellow-300 text-center p-4">
-    <p>&copy; 2025 DWITI Pharmaceuticals. All rights reserved.</p>
+  <footer class="bg-white text-center py-6 border-t border-[#AD974F]">
+    <div class="text-dark">
+      <p>&copy; 2025 <span class="gold-text font-semibold">DWITI Pharmaceuticals</span>. All rights reserved.</p>
+      <p class="text-sm mt-1">GSTIN: <strong class="gold-text">24AOQPB4958L1ZH</strong></p>
+    </div>
   </footer>
 
 </body>
